@@ -1,12 +1,10 @@
 # Project2
 
-### Made by Maria Luisa Santos & Carlos García
+##### Made by Maria Luisa Santos & Carlos García
 
 Project with a CRUD populated database
 
-
-#### EndPoints List
-
+###### Endpoint List
 
 ###### Guest
 
@@ -15,7 +13,6 @@ Project with a CRUD populated database
 | Get    | /           |
 | Get    | /events/    | Listado de eventos |
 | Get    | /events/:id | Detalles evento    |
-
 
 ###### Client
 
@@ -26,7 +23,6 @@ Project with a CRUD populated database
 | Get    | /login    | Acceso            |
 | Post   | /login    | Acceso            |
 | Get    | /profile  | Eventos guardados |
-
 
 ###### Partner
 
@@ -40,7 +36,6 @@ Project with a CRUD populated database
 | Get    | /partner/event-list/edit   | Edición eventos     |
 | Post   | /partner/event-list/edit   | Edición eventos     |
 | Get    | /partner/event-list/delete | Eliminación eventos |
-
 
 ###### Admin
 
