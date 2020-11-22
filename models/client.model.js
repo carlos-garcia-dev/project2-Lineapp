@@ -12,7 +12,7 @@ const clientSchema = new mongoose.Schema({
         required: true, 
     },
 
-    nickname: {
+    username: {
         type: String,
         required: true,
         
@@ -31,7 +31,7 @@ const clientSchema = new mongoose.Schema({
         }
     },
 
-    billNumber: {
+    creditcard: {
         type: Number,
         required: true,
     },

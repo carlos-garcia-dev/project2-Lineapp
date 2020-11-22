@@ -10,6 +10,11 @@ const eventSchema = new mongoose.Schema({
         required: true,
     },
 
+    pictureUrl: {
+        type: String,
+        required: true,
+    },
+
     location: {
         type: String,
         required: true,
@@ -23,7 +28,7 @@ const eventSchema = new mongoose.Schema({
     },
 
     date: {
-        type: Number,
+        type: Date,
         required: true,
     },
 
@@ -35,12 +40,11 @@ const eventSchema = new mongoose.Schema({
 
     location: {
         type: String,
-        required: true
-    },
-
-    coords: {
+        required: true,
+            coords: {
         type: [Number],
         required: true,
+    },
     },
 
     partner: {
