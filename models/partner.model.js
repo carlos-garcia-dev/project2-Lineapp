@@ -1,5 +1,5 @@
 const mongoose = require("mongoose")
-const eventSchema = new mongoose.Schema({
+const partnerSchema = new mongoose.Schema({
 
     name: {
         type: String,
@@ -29,6 +29,6 @@ const eventSchema = new mongoose.Schema({
 
 
 
-const Partner = mongoose.model('Partner', eventSchema)      
+const Partner = mongoose.model('Partner', partnerSchema)      
 
-module.exports = Parter
+module.exports = Partner
