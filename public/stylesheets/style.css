@@ -1,4 +1,22 @@
 body {
   font-family: sans-serif; }
 
+img {
+  width: 100%; }
+
+a {
+  color: #7f7f7f;
+  text-decoration: none; }
+
+a:hover {
+  font-weight: 600;
+  color: black;
+  text-decoration: none; }
+
+.navigation-links {
+  padding-left: 10px; }
+
+.main-image {
+  margin-bottom: 10px; }
+
 /*# sourceMappingURL=style.css.map */

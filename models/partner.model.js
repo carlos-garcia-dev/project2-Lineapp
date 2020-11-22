@@ -4,7 +4,6 @@ const partnerSchema = new mongoose.Schema({
     name: {
         type: String,
         required: true,
-
     },
     
     cif: {
@@ -22,7 +21,6 @@ const partnerSchema = new mongoose.Schema({
         required:true,
     },
     
-
 },{
     timestamps: true,
 })

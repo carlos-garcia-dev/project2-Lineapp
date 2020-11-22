@@ -8,13 +8,11 @@ const eventSchema = new mongoose.Schema({
     description: {
         type: String,
         required: true,
-        
     },
 
     location: {
         type: String,
         required: true,
-
     },
 
     duration: {
@@ -27,14 +25,25 @@ const eventSchema = new mongoose.Schema({
     date: {
         type: Number,
         required: true,
-
     },
 
     genre: {
         type: String,
         enum: ['pop', 'rock', 'techno', 'indie', 'jazz'],
         required: true,
-    }, partner: {
+    },
+
+    location: {
+        type: String,
+        required: true
+    },
+
+    coords: {
+        type: [Number],
+        required: true,
+    },
+
+    partner: {
         type: Schema.Types.ObjectId,
         ref: 'Partner'
     },
@@ -43,12 +52,14 @@ const eventSchema = new mongoose.Schema({
         type: Boolean,
         default: true
     }
-},{
+}, {
     timestamps: true,
 })
 
+eventSchema.index({
+    location: '2dsphere'
+})
 
-
-const Event = mongoose.model('Event', eventSchema)      
+const Event = mongoose.model('Event', eventSchema)
 
 module.exports = Event
