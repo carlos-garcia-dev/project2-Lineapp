@@ -32,18 +32,15 @@ module.exports = app => {
                 return next(err);
             }
             if (!client) {
-                return next(null, false, { message: "Usuario no registrado" })
+                return next(null, false, { errorMsg: "Usuario no registrado" })
             }
             if (!bcrypt.compareSync(password, client.password)) {
-                return next(null, false, { message: "Contraseña incorrecta" })
+                return next(null, false, { errorMsg: "Contraseña incorrecta" })
             }
             return next(null, client);
         })
     }))
 
-
     app.use(passport.initialize())
     app.use(passport.session())
-
-
 }

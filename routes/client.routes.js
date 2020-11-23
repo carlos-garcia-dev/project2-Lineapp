@@ -1,9 +1,9 @@
 const express = require('express')
 const router = express.Router()
+const passport = require('passport')
 const Client = require('./../models/client.model.js')
 const bcrypt = require("bcryptjs")
 const bcryptSalt = 10
-const passport = require('passport')
 
 //SIGNUP
 
@@ -15,8 +15,8 @@ router.post('/signup', (req, res, next) => {
      if (username === "" || password === "") {
         res.render("client/signup", { errorMsg: "Rellena todos los campos" })
         return
-    }
-
+     }
+    
     Client
         .findOne({ username })
         .then(client => {
@@ -24,8 +24,6 @@ router.post('/signup', (req, res, next) => {
                 res.render("client/signup", { errorMsg: "Este usuario ya existe" })
                 return
             }
-
-            
             const salt = bcrypt.genSaltSync(bcryptSalt)
             const hashPass = bcrypt.hashSync(password, salt)
 
@@ -38,9 +36,7 @@ router.post('/signup', (req, res, next) => {
 
  //LOGIN   
 
-router.get('/login', (req, res, next) => res.render("client/login"))
-
-
+router.get('/login', (req, res, next) => res.render("client/login", { errorMsg: req.flash("error") }))
 router.post("/login", passport.authenticate("local", {
     successRedirect: "/",
     failureRedirect: "/login",
@@ -55,15 +51,7 @@ router.get('/logout', (req, res) => {
     res.redirect("/login")
 })
 
-
-
-
-
-
-
-
-
-
+router.get('/logout', (req, res) => req.session.destroy((err) => res.redirect("/")))
 
 
 
