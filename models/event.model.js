@@ -1,5 +1,6 @@
 const mongoose = require("mongoose")
 const Schema = mongoose.Schema
+
 const eventSchema = new Schema({
     name: {
         type: String,
@@ -38,14 +39,14 @@ const eventSchema = new Schema({
         type: {
             type: String,
         },
-            coords: {
-        type: [Number],
-    },
+        coordinates: {
+            type: [Number],
+        },
     },
 
     partner: [{
         type: Schema.Types.ObjectId,
-        ref: 'Partner'
+        ref: 'Client'
     }],
 
     active: {
