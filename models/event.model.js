@@ -1,5 +1,6 @@
 const mongoose = require("mongoose")
-const eventSchema = new mongoose.Schema({
+const Schema = mongoose.Schema
+const eventSchema = new Schema({
     name: {
         type: String,
         required: true,
@@ -15,15 +16,10 @@ const eventSchema = new mongoose.Schema({
         required: true,
     },
 
-    location: {
-        type: String,
-        required: true,
-    },
-
     duration: {
         type: Number,
         min: 30,
-        max: 60,
+        max: 500,
         required: true,
     },
 
@@ -39,18 +35,18 @@ const eventSchema = new mongoose.Schema({
     },
 
     location: {
-        type: String,
-        required: true,
+        type: {
+            type: String,
+        },
             coords: {
         type: [Number],
-        required: true,
     },
     },
 
-    partner: {
+    partner: [{
         type: Schema.Types.ObjectId,
         ref: 'Partner'
-    },
+    }],
 
     active: {
         type: Boolean,

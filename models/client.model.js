@@ -1,5 +1,6 @@
 const mongoose = require("mongoose")
-const clientSchema = new mongoose.Schema({
+const Schema = mongoose.Schema
+const clientSchema = new Schema({
 
     name: {
         type: String,
@@ -26,7 +27,7 @@ const clientSchema = new mongoose.Schema({
     email: {
         type: String,
         validate: {
-            validator: text => text.endsWith('TO-DO'),
+            validator: text => text.endsWith('.com'),
             message: 'Use a valid mail'
         }
     },

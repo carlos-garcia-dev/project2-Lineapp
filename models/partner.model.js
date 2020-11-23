@@ -1,5 +1,6 @@
 const mongoose = require("mongoose")
-const partnerSchema = new mongoose.Schema({
+const Schema = mongoose.Schema
+const partnerSchema = new Schema({
 
     name: {
         type: String,
@@ -7,7 +8,7 @@ const partnerSchema = new mongoose.Schema({
     },
     
     cif: {
-        type: Number,
+        type: String,
         required: true,
     },
 
