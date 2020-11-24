@@ -24,10 +24,6 @@ router.get('/events/:id', (req, res) => res.render('main/event-details'))
 
 
 
-
-
-
-
 //About
 router.get('/about', (req, res) => res.render('main/about'))
 

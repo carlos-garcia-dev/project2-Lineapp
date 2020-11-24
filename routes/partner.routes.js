@@ -86,8 +86,11 @@ router.get('/logout', (req, res) => req.session.destroy((err) => res.redirect("/
 
 
 router.get('/', (req, res, next) => {
+    const PartnerId = req.params._id
+
     Event
-        .find(req.query.id)
+        .find(PartnerId)
+        //.then(console.log(PartnerId))
         .then(allPartners => res.render('partner/index', { partner: allPartners}))
         .catch(err => next(new Error(err)))
 })

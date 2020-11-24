@@ -10,7 +10,7 @@ const bcryptSalt = 10
 
 
 
-// // //Client
+//Client
 //SIGNUP
 router.get('/signup', (req, res, next) => res.render("client/signup"))
 
@@ -75,9 +75,9 @@ router.get('/logout', (req, res) => {
 
 
 
-///
 
-// // //Admin
+
+//Admin
 router.get('/management', (req, res) => res.render('admin/admin-login'))
 
 
