@@ -85,12 +85,12 @@ router.get('/logout', (req, res) => req.session.destroy((err) => res.redirect("/
 // })
 
 
-// router.get('/', (req, res, next) => {
-//     Partner
-//         .find()
-//         .then(allPartners => res.render('partner/index', { partner: allPartners}))
-//         .catch(err => next(new Error(err)))
-// })
+router.get('/', (req, res, next) => {
+    Event
+        .find(req.query.id)
+        .then(allPartners => res.render('partner/index', { partner: allPartners}))
+        .catch(err => next(new Error(err)))
+})
 
 // router.get('/events', (req, res) => {
 
