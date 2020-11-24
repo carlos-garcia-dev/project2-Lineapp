@@ -75,40 +75,15 @@ router.get('/logout', (req, res) => req.session.destroy((err) => res.redirect("/
 //CRUD
 
 
-// router.get('/', (req, res, next) => {
-//     Event
-//         .find()
-//         .populate('partner_id')
-//         //.then(allEvents => res.render('partner/index', { events: allEvents}))
-//         .then (console.log('id'))
-//         .catch(err => next(new Error(err)))
-// })
-
 
 router.get('/', (req, res, next) => {
     const PartnerId = req.params._id
 
     Event
         .find(PartnerId)
-        //.then(console.log(PartnerId))
-        .then(allPartners => res.render('partner/index', { partner: allPartners}))
+        .then(allPartners => res.render('partner/index', {allPartners}))
         .catch(err => next(new Error(err)))
 })
-
-// router.get('/events', (req, res) => {
-
-//     Event
-//         .find()
-//         .then(allEvents => res.render('main/event-list', {
-//             allEvents
-//         }))
-//         .catch(() => res.render("main/event-list", {
-//             errorMsg: "Hubo un error"
-//         }))
-// })
-
-
-
 
 
 module.exports = router
