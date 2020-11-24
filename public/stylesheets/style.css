@@ -24,7 +24,7 @@ a:hover {
 .hero {
   margin-bottom: 10px; }
 
-.map {
+#map {
   height: 400px;
   background-color: #7f7f7f; }
 

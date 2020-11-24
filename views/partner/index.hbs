@@ -3,11 +3,19 @@
     {{!-- <div class="col-md-6 row">
         <h1>{{title}}</h1>
     </div> --}}
-{{#each allEvents}}
-<p>{{{partner_id}}}</p>
-{{/each}}
 
 {{#each allPartners}}
 <p>{{{partner.name}}}</p>
 {{/each}}
+<div class="row">
+<div class="col-md-8">
+    <h4>hola</h4>
+</div>
+</div>
+
+
+<div class="col-md-4 column">
+    <a class="btn-block" href="TO-DO">Edit</a>
+    <a class="btn-block btn-danger"  href="TO-DO">Delete</a>
+</div>
 </div>
