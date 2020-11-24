@@ -1,0 +1,13 @@
+<div class="container">
+    <h2>PARTNER INDEX</h2>
+    {{!-- <div class="col-md-6 row">
+        <h1>{{title}}</h1>
+    </div> --}}
+{{#each allEvents}}
+<p>{{{partner_id}}}</p>
+{{/each}}
+
+{{#each allPartners}}
+<p>{{{partner.name}}}</p>
+{{/each}}
+</div>

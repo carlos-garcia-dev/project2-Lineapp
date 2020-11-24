@@ -77,11 +77,6 @@ router.get('/logout', (req, res) => {
 
 
 
-
-
-
-
-
 // // //Admin
 router.get('/management', (req, res) => res.render('admin/admin-login'))
 
@@ -97,8 +92,6 @@ router.get('/logout', (req, res) => {
     req.logout()
     res.redirect('/')
 })
-
-
 
 
 

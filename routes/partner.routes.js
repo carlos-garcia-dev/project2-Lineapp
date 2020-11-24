@@ -2,7 +2,8 @@ const express = require('express')
 const router = express.Router()
 const passport = require('passport')
 
-const Client = require('./../models/client.model.js')
+const Client = require('./../models/client.model')
+const Event = require('./../models/event.model')
 
 const bcrypt = require("bcryptjs")
 const bcryptSalt = 10
@@ -69,5 +70,42 @@ router.get('/logout', (req, res) => {
 })
 
 router.get('/logout', (req, res) => req.session.destroy((err) => res.redirect("/")))
+
+
+//CRUD
+
+
+// router.get('/', (req, res, next) => {
+//     Event
+//         .find()
+//         .populate('partner_id')
+//         //.then(allEvents => res.render('partner/index', { events: allEvents}))
+//         .then (console.log('id'))
+//         .catch(err => next(new Error(err)))
+// })
+
+
+// router.get('/', (req, res, next) => {
+//     Partner
+//         .find()
+//         .then(allPartners => res.render('partner/index', { partner: allPartners}))
+//         .catch(err => next(new Error(err)))
+// })
+
+// router.get('/events', (req, res) => {
+
+//     Event
+//         .find()
+//         .then(allEvents => res.render('main/event-list', {
+//             allEvents
+//         }))
+//         .catch(() => res.render("main/event-list", {
+//             errorMsg: "Hubo un error"
+//         }))
+// })
+
+
+
+
 
 module.exports = router
