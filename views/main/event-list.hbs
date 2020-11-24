@@ -2,16 +2,28 @@
 
     <h2>Events</h2>
 
-    <figure class="col-md-6 map">
+    <figure class="col-md-12 map"></figure>
 
+    <div class="row col-md-12 justify-content-right">
 
-    </figure>
-    <div class="col-md-4">
+        {{#each allEvents}}
+        <div class="col-md-6">
+            <img src="{{pictureUrl}}" class="event-view" alt="{{name}} imagen">
+            <a href="/events/{{id}}'">
+                <h3>{{name}}</h3>
+            </a>
+            <h5>{{description}} {{genre}} </h5>
+            <p>Duration {{duration}} mins</p>
+            <p>{{date}}</p>
+            <p>{{location.coordinates}}</p>
+        </div>
+        {{/each}}
 
     </div>
 </div>
 
-{{!-- <script src="./js/styles.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=____aqui_tu_api_key____&callback=initApp"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.0/axios.min.js"></script>
+<script src="./js/styles.js"></script>
 <script src="./js/directions.js"></script>
 <script src="./js/app.js"></script>
-<script src="https://maps.googleapis.com/maps/api/js?key=____aqui_tu_api_key____&callback=initApp"></script> --}}

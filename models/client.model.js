@@ -11,7 +11,7 @@ const clientSchema = new Schema({
     email: {
         type: String,
         validate: {
-            validator: text => text.endsWith('.com'),
+            validator: text => text.endsWith('.com'), //Regex
             message: 'Use a valid mail'
         }
     },
@@ -39,7 +39,6 @@ const clientSchema = new Schema({
     },
 
 
-
     id: {
         type: String,
         // required: true,
@@ -53,7 +52,7 @@ const clientSchema = new Schema({
     },
 
 
-    // Role Partner
+    // // //Partner
     cif: {
         type: String,
         // required: true,
@@ -68,6 +67,8 @@ const clientSchema = new Schema({
         type: String,
         // required: true,
     },
+
+    // calle, numero, codigo postal, piso, numero de telefono
 
     //Admin
 

@@ -13,10 +13,27 @@ a:hover {
   color: black;
   text-decoration: none; }
 
+.nav-bar {
+  background-color: #ffffff;
+  margin-bottom: 40px;
+  box-shadow: 0px 1px 6px #7f7f7f; }
+
 .navigation-links {
   padding-left: 10px; }
 
-.main-image {
+.hero {
   margin-bottom: 10px; }
+
+.map {
+  height: 400px;
+  background-color: #7f7f7f; }
+
+.event-view {
+  height: 14rem;
+  object-fit: cover;
+  margin-bottom: 10px; }
+
+footer {
+  border-top: 1px solid #7f7f7f; }
 
 /*# sourceMappingURL=style.css.map */
