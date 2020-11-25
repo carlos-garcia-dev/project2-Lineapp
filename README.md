@@ -18,8 +18,8 @@ Project with a CRUD populated database
 
 | Method | Path      | Description       |
 | ------ | --------- | ----------------- |
-| Get    | /register | Registro          |
-| Post   | /register | Registro          |
+| Get    | /signup   | Registro          |
+| Post   | /signup   | Registro          |
 | Get    | /login    | Acceso            |
 | Post   | /login    | Acceso            |
 | Get    | /profile  | Eventos guardados |
@@ -28,8 +28,8 @@ Project with a CRUD populated database
 
 | Method | Path                       | Description         |
 | ------ | -------------------------- | ------------------- |
-| Get    | /partner/register          | Registro            |
-| Post   | /partner/register          | Registro            |
+| Get    | /partner/signup            | Registro            |
+| Post   | /partner/signup            | Registro            |
 | Get    | /partner/login             | Acceso              |
 | Post   | /partner/login             | Acceso              |
 | Get    | /partner/event-list        | Eventos guardados   |
