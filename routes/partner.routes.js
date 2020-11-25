@@ -57,7 +57,7 @@ router.post('/signup', (req, res, next) => {
 
 router.get('/login', (req, res, next) => res.render('partner/login')) //{ errorMsg: req.flash("error") }))
 router.post('/partner/login', passport.authenticate("local", {
-    successRedirect: "/",
+    successRedirect: "/:partner_id",
     failureRedirect: "/login",
     failureFlash: true,
     passReqToCallback: true
@@ -75,17 +75,39 @@ router.get('/logout', (req, res) => req.session.destroy((err) => res.redirect("/
 
 //CRUD
 
+// router.get('/', (req, res, next) => {
+//     const PartnerId = req.params._id
+
+//     Event
+//         .find(PartnerId)
+//         .then(allPartners => res.render('partner/index', {allPartners}))
+//         .catch(err => next(new Error(err)))
+// })
 
 
-router.get('/', (req, res, next) => {
 
-    const PartnerId = req.params._id
+router.get('/', (req, res => res) 
+
+router.get('/:partner_id', (req, res, next) => {
+
+    const
+        partnerId = req.params.partner_id
 
     Event
-        .find(PartnerId)
-        .then(allPartners => res.render('partner/index', {allPartners}))
+        .find({
+            'partner': ObjectId(partnerId)
+        })
+        // .populate('partner')
+        .then(console.log(partnerId))
+        .then(allPartnerEvents => res.render('partner/index', {
+            allPartnerEvents
+        }))
         .catch(err => next(new Error(err)))
 })
+
+
+
+
 
 
 

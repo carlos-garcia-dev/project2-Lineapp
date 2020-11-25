@@ -1,22 +1,73 @@
 <div class="container">
-    <h2>PARTNER INDEX</h2>
-    {{!-- <div class="col-md-6 row">
-        <h1>{{title}}</h1>
-    </div> --}}
 
-    {{#each allPartners}}
-    <p>{{{this.name}}}</p>
-    <p>{{{this.id}}}</p>
-    {{/each}}
+    <h2>Partner Index</h2>
+
     <div class="row">
-        <div class="col-md-8">
-            <h4>hola</h4>
+
+        {{!-- 
+        {{#each allPartners}}
+
+        <div class="col-md-6">
+            <h4>Evento</h4>
+            <h4>{{{this.name}}}</h4>
+            <p>{{{this.id}}}</p>
+
         </div>
+
+        <div class="column align-center">
+            <div class="col-md-6">
+                <a class="btn btn-block" href="TO-DO">Edit</a>
+                <a class="btn btn-block btn-danger" href="TO-DO">Delete</a>
+            </div>
+        </div>
+
+        {{/each}} --}}
+
+
+
+
+
+
+
+
+
+        {{#each allPartnerEvents}}
+
+        <div class="col-md-6">
+            <h4>Evento</h4>
+            <p>{{id}}</p>
+            <h4>Partner</h4>
+            <h4>{{{name}}}</h4>
+            <p>{{{partner}}}</p>
+
+        </div>
+
+        <div class="column align-center">
+            <div class="col-md-6">
+                <a class="btn btn-block" href="TO-DO">Edit</a>
+                <a class="btn btn-block btn-danger" href="TO-DO">Delete</a>
+            </div>
+        </div>
+
+        {{/each}}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     </div>
 
 
-    <div class="col-md-4 column">
-        <a class="btn-block" href="TO-DO">Edit</a>
-        <a class="btn-block btn-danger" href="TO-DO">Delete</a>
-    </div>
+
 </div>
