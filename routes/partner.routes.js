@@ -6,6 +6,7 @@ const Client = require('./../models/client.model')
 const Event = require('./../models/event.model')
 
 const bcrypt = require("bcryptjs")
+const { isValidObjectId } = require('mongoose')
 const bcryptSalt = 10
 
 
@@ -77,6 +78,7 @@ router.get('/logout', (req, res) => req.session.destroy((err) => res.redirect("/
 
 
 router.get('/', (req, res, next) => {
+
     const PartnerId = req.params._id
 
     Event
@@ -84,6 +86,11 @@ router.get('/', (req, res, next) => {
         .then(allPartners => res.render('partner/index', {allPartners}))
         .catch(err => next(new Error(err)))
 })
+
+
+
+
+
 
 
 module.exports = router
