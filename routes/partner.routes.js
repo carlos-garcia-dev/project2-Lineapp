@@ -74,9 +74,33 @@ router.get('/logout', (req, res) => req.session.destroy((err) => res.redirect("/
 
 //CRUD
 
+// router.get('/', (req, res, next) => {
+//     const PartnerId = req.params._id
+
+//     Event
+//         .find(PartnerId)
+//         .then(allPartners => res.render('partner/index', {allPartners}))
+//         .catch(err => next(new Error(err)))
+// })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 router.get('/', (req, res, next) => {
+    
+
     const PartnerId = req.params._id
 
     Event
@@ -84,6 +108,19 @@ router.get('/', (req, res, next) => {
         .then(allPartners => res.render('partner/index', {allPartners}))
         .catch(err => next(new Error(err)))
 })
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 module.exports = router
