@@ -3,7 +3,7 @@
     <h2>Partner Index</h2>
 
     <div class="row">
-        
+
         {{!-- 
         {{#each allPartners}}
 
@@ -31,12 +31,14 @@
 
 
 
-        {{#each allPartners}}
+        {{#each allPartnerEvents}}
 
         <div class="col-md-6">
             <h4>Evento</h4>
-            <h4>{{{this.name}}}</h4>
-            <p>{{{this.id}}}</p>
+            <p>{{id}}</p>
+            <h4>Partner</h4>
+            <h4>{{{name}}}</h4>
+            <p>{{{partner}}}</p>
 
         </div>
 
