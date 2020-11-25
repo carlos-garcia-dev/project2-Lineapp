@@ -73,6 +73,7 @@ router.get('/logout', (req, res) => {
 router.get('/logout', (req, res) => req.session.destroy((err) => res.redirect("/")))
 
 
+
 //CRUD
 
 // router.get('/', (req, res, next) => {
@@ -84,15 +85,25 @@ router.get('/logout', (req, res) => req.session.destroy((err) => res.redirect("/
 //         .catch(err => next(new Error(err)))
 // })
 
+//     Event
+//         .find(PartnerId)
+//         .then(allPartners => res.render('partner/index', {allPartners}))
+//         .catch(err => next(new Error(err)))
+// })
 
 
-router.get('/', (req, res => res) 
+
+//router.get('/', (req, res => res) 
+
+// router.get('/:partner_id', (req, res, next) => {
+
+//     const
+//         partnerId = req.params.partner_id
+
 
 router.get('/:partner_id', (req, res, next) => {
-
-    const
-        partnerId = req.params.partner_id
-
+    const partnerId = req.user.id
+    const filter = mongoose.Types.ObjectId(partnerId)
     Event
         .find({
             'partner': ObjectId(partnerId)
@@ -102,6 +113,8 @@ router.get('/:partner_id', (req, res, next) => {
         .then(allPartnerEvents => res.render('partner/index', {
             allPartnerEvents
         }))
+        .find({partner: filter})
+        .then(allPartnerEvents => res.render('partner/index', { allPartnerEvents }))
         .catch(err => next(new Error(err)))
 })
 
@@ -111,6 +124,52 @@ router.get('/:partner_id', (req, res, next) => {
 
 
 
+// router.get('/new:partner_id', (req, res, next) => {
+//     const partnerId = req.user.id
+//     const filter = mongoose.Types.ObjectId(partnerId)
+    
+//     Partner
+//     .find({partner: filter})
+//     .then(allPartnerEvents => res.render('partner/new-event', { allPartnerEvents }))
+//     .catch(err => next(new Error(err)))
+// })
+
+
+// router.post('/new:partner_id', (req, res, next) => {
+//   const partnerId = req.user.id
+//   const filter = mongoose.Types.ObjectId(partnerId)  
+//   const { name, description, duration, date, genre, location, partner, active } = req.body
+
+//     Event
+        
+//     .create({ name, description, duration, date, genre, location, partner, active, partner_id: partner })
+//     .then(() => res.redirect('main/event-list'))
+//     .catch(err => next(new Error(err)))
+// })
+
+
+
+// router.post('/edit:partner_id', (req, res, next) => {
+//   const partnerId = req.user.id
+//   const filter = mongoose.Types.ObjectId(partnerId)
+//   const { name, description, duration, date, genre, location, partner, active  } = req.body
+
+//     Event
+//     .findByIdAndUpdate(req.query.id, { name, description, duration, date, genre, location, partner, active, partner_id: partner })
+//     .then(() => res.redirect(`/events/${req.query.id}`))
+//     .catch(err => next(new Error(err)))
+// })
+
+
+// router.get('/delete:partner_id', (req, res, next) => {
+//     const partnerId = req.user.id
+//     const filter = mongoose.Types.ObjectId(partnerId)
+    
+//     Event
+//     .findByIdAndDelete(req.query.id)
+//     .then(() => res.redirect('/main/event-list'))
+//     .catch(err => next(new Error(err)))
+// })
 
 
 
