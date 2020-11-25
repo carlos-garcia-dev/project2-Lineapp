@@ -1,0 +1,38 @@
+<h1>PARTNER NEW EVENT</h1>
+
+
+
+<div class="container">
+    <h1>Nuevo evento</h1>
+
+    {{!-- <form method="POST" action="/events/edit-events?eventsId={{_id}}"> --}}
+
+        <div class="form-group">
+            <label>Nombre</label>
+            <input type="text" class="form-control" name="name" value="{{name}}">
+        </div>
+        <div class="form-group">
+            <label>Descripción</label>
+            <input type="text" class="form-control" name="description" value="{{description}}">
+        </div>
+        <div class="form-group">
+            <label>Duración</label>
+            <input type="text" class="form-control" name="duration" value="{{duration}}">
+        </div>
+        <div class="form-group">
+            <label>Fecha</label>
+            <input type="text" class="form-control" name="date" value="{{date}}">
+        </div>
+        <div class="form-group">
+            <label>Género</label>
+            <input type="text" class="form-control" name="genre" value="{{genre}}">
+        </div>
+        <div class="form-group">
+            <label>Localización</label>
+            <input type="text" class="form-control" name="location" value="{{location}}">
+        </div>
+
+        <button type="submit" class="btn btn-info">Crear evento</button>
+    </form>
+
+</div>
