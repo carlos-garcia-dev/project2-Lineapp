@@ -42,5 +42,5 @@ Project with a CRUD populated database
 | Method | Path                | Description      |
 | ------ | ------------------- | ---------------- |
 | Get    | /management         | Acceso           |
-| Get    | /management/clients | Gestión clientes |
+| Get    | /management/client  | Gestión clientes |
 | Get    | /management/partner | Gestión partner  |
