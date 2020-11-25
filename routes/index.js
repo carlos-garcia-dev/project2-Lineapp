@@ -5,4 +5,5 @@ module.exports = app => {
     app.use('/', require('./client.routes.js'))
     app.use('/', require('./guest.routes.js'))
     app.use('/partner', require('./partner.routes.js'))
+    app.use('/api', require('./api.routes.js'))
 }

@@ -68,95 +68,88 @@ const events = [{
         active: 'true'
     }, 
 
-
-
-
     {
         name: 'Vetusta Morla (En Directo)',
         description: 'Directo desde museo Reina Sofía',
         duration: '65',
         pictureUrl: 'https://www.vipstylemagazine.com/wp-content/uploads/2019/01/vetusta-vms16.1.png',
-        date: new Date(2020, 12, 31, 03, 00), //TO-DO
+        date: new Date(2020, 09, 02, 03, 00), 
         genre: 'pop',
         location: {
             type: 'Point',
-            coordinates: [40.4178777, -3.6988467]   //TO-DO
+            coordinates: [40.4143991, -3.7018374]
         },
 
-        partner: { //TO-DO
+        partner: {
             'role': 'Partner',
-            'name': 'Mondo Disko',
-            'cif': 'A28654036',
+            'name': 'Café Central',
+            'cif': 'A28854036',
             'fiscalName': 'Europea De Explotaciones S.A.',
-            'direction': 'Calle Arenal, 11, Madrid, 28013',
+            'direction': 'Plaza del Angel',
         },
         active: 'true'
     },
     {
-        name: 'Zahara', //TO-DO
+        name: 'Ibeyi',
         description: 'Música en directo',
         duration: '90',
-        pictureUrl: 'https://highlark.com/wp-content/uploads/2017/02/Devendra-Banhart-Mayan-Highlark-02-1024x683.jpg',
-        date: new Date(2020, 02, 18, 21, 00), //TO-DO
+        pictureUrl: //'TO-DO',
+        date: new Date(2020, 05, 22, 21, 00), //TO-DO
         genre: 'indie',
         location: {
             type: 'Point',
-            coordinates: [40.4129999, -3.7243401] //TO-DO
+            coordinates: [40.4198090, -3.7079108]
         },
 
-        partner: { //TO-DO
+        partner: { 
             'role': 'Partner',
-            'name': 'Sala La Riviera',
-            'cif': 'B86762010',
-            'fiscalName': 'LA RIVIERA S.L.',
-            'direction': 'Paseo Bajo de la Virgen del Puerto, 328005',
+            'name': 'Café Berlin',
+            'cif': 'B86762023',
+            'fiscalName': 'CAFE BERLIN S.L.',
+            'direction': 'C, Costanilla de los Ángeles, 20, 28013 Madrid',
         },
         active: 'true'
     },
     {
-        name: 'Novedades Carminha', //TO-DO
-        description: 'Set Live de Vril',
+        name: 'Larkin Poe', 
+        description: 'Live Music',
         duration: '300',
-        pictureUrl: 'https://pbs.twimg.com/media/D_RgrI8VUAEf7Yt.jpg:large',
-        date: new Date(2020, 06, 23, 02, 30), //TO-DO
-        genre: 'techno',
+        pictureUrl: //'TO-DO',
+        date: new Date(2020, 06, 17, 02, 30), 
+        genre: 'Roots Rock',
         location: {
             type: 'Point',
-            coordinates: [40.4653883, -3.6750375] //TO-DO
+            coordinates: [40.4199282, -3.7024822] 
         },
-        partner: { //TO-DO
+        partner: { 
             'role': 'Partner',
-            'name': 'Sala Crow',
-            'cif': 'B87687083',
+            'name': 'Wurlitzer Ballroom',
+            'cif': 'B87687583',
             'fiscalName': 'Live Music Lab S.L.',
-            'direction': 'Lugar Estacion de Ferrocarril Chamartin, S/N - LOCAL 8, Madrid, 28036',
+            'direction': 'Calle de las Tres Cruces, 12, 28013 Madrid',
         },
         active: 'true'
     }, 
 
 
-
-
-
-
     {
-        name: 'Psyk',
-        description: 'Techno Live Set',
+        name: 'DeRobert $ The Half-Truths',
+        description: 'Soul',
         duration: '315',
-        pictureUrl: 'https://i-d-images.vice.com/images/2017/03/21/regal-desmonta-los-clichs-de-la-escena-techno-en-espaa-body-image-1490114313.jpg',
-        date: new Date(2020, 12, 31, 03, 00), //TO-DO
+        pictureUrl: //'TO-DO',
+        date: new Date(2020, 03, 14, 03, 00), 
         genre: 'techno',
         location: {
             type: 'Point',
-            coordinates: [40.4178777, -3.6988467] //TO-DO
+            coordinates: [40.4312690, -3.7009898]
         },
 
-        partner: { //TO-DO
+        partner: { 
             'role': 'Partner',
-            'name': 'Stardust',
-            'cif': 'A28654036',
-            'fiscalName': 'Europea De Explotaciones S.A.',
-            'direction': 'Calle Arenal, 11, Madrid, 28013', 
+            'name': 'Sala Clamores',
+            'cif': 'A28651036',
+            'fiscalName': 'Europea De Explotaciones S.A.',//TO-DO
+            'direction': 'Calle de Alburquerque, 14, 28010 Madrid', 
         },
         active: 'true'
     },
@@ -164,15 +157,15 @@ const events = [{
         name: 'Kwartz',
         description: 'Música en directo',
         duration: '90',
-        pictureUrl: 'https://highlark.com/wp-content/uploads/2017/02/Devendra-Banhart-Mayan-Highlark-02-1024x683.jpg',
-        date: new Date(2020, 02, 18, 21, 00), //TO-DO
+        pictureUrl: //'TO-DO',
+        date: new Date(2020, 02, 06, 21, 00), 
         genre: 'indie',
         location: {
             type: 'Point',
-            coordinates: [40.4129999, -3.7243401] //TO-DO
+            coordinates: [40.4129999, -3.7243401] 
         },
 
-        partner: { //TO-DO
+         partner: {
             'role': 'Partner',
             'name': 'Sala La Riviera',
             'cif': 'B86762010',
