@@ -1,25 +1,23 @@
 <div class="container">
 
-    <h2>Details</h2>
 
     <figure class="col-md-12 map"></figure>
 
     <div class="row col-md-12 justify-content-right">
 
-        {{#each allEvents}}
+        <h2>Details</h2>
+
         <div class="col-md-6">
-            <a href="/events/{{id}}">
-                <h3>{{name}}</h3>
-            </a>
+
+            <h3>{{theEvent.name}}</h3>
+
             <h5>{{description}} {{genre}} </h5>
             <p>Duration {{duration}} mins</p>
             <p>{{date}}</p>
             <img src="{{pictureUrl}}" alt="Concert">
-            <p>{{location}}</p>
         </div>
-        {{/each}}
 
-        <a href="/edit/{{id}}">Editar</a>
+        <a href="/events/"> Volver a eventos</a>
 
     </div>
-</div>  
+</div>

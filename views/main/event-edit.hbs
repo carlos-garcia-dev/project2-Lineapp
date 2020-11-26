@@ -5,7 +5,7 @@
         <div class="container">
             <h1>Editar eventos</h1>
 
-            <form method="POST" action="/events/edit?eventsId={{_id}}">
+            <form method="POST" action="/edit/{{theEvent._id}}">
 
                 <div class="form-group">
                     <label>Nombre</label>
@@ -19,15 +19,15 @@
                 </div>
 
                 <div class="form-group">
-                    <label>Imagen</label>
-                    <input name="pictureUrl" type="text" class="form-control" id="pictureUrl-input"
-                        value="{{theEvent.pictureUrl}}">
-                </div>
-
-                <div class="form-group">
                     <label>Duración</label>
                     <input name="duration" type="text" class="form-control" id="duration-input"
                         value="{{theEvent.duration}}">
+                </div>
+
+                <div class="form-group">
+                    <label>Imagen</label>
+                    <input name="pictureUrl" type="text" class="form-control" id="pictureUrl-input"
+                        value="{{theEvent.pictureUrl}}">
                 </div>
 
                 <div class="form-group">

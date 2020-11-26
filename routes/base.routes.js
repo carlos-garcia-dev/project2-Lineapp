@@ -10,7 +10,10 @@ const router = express.Router()
 
 
 // Authenticated
-router.get('/', (req, res) => res.render('index'))
+router.get('/', (req, res) => {
+    console.log('EL USUARIO CON SESION INCIADA ES:', req.user)
+    res.render('index')
+})
 
 
 // router.get('/perfil', ensureAuthenticated, checkRole(['Admin', 'Partner', 'Client']), (req, res) => res.render('profile', {

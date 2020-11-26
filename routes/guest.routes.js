@@ -7,6 +7,9 @@ const Event = require('./../models/event.model')
 //General Routes
 router.get('/about', (req, res) => res.render('main/about'))
 
+const ensureAuthenticated = (req, res, next) => req.isAuthenticated() ? next() : res.render('client/login', {
+  errorMsg: 'Por favor, inicia sesión'
+})
 
 
 // Read event
@@ -23,8 +26,20 @@ router.get('/events', (req, res) => {
 })
 
 
+//Read Details
+router.get('/details/:events_id', (req, res) => {
+
+  const eventId = req.params.events_id
+  console.log(eventId)
+  Event
+    .findById(eventId)
+    .then(theEvent => res.render('main/event-details', theEvent))
+    .catch(err => console.log('Error:', err))
+})
+
+
 // Create event
-router.get('/new-event', (req, res) => res.render('main/event-new'))
+router.get('/new-event', ensureAuthenticated, (req, res) => res.render('main/event-new'))
 
 router.post('/new-event', (req, res) => {
 
@@ -46,8 +61,6 @@ router.post('/new-event', (req, res) => {
 
   const eventId = req.query.eventId
 
-
-
   Event
     .create({
       name,
@@ -56,7 +69,8 @@ router.post('/new-event', (req, res) => {
       duration,
       date,
       genre,
-      location
+      location,
+      partner: req.user._id
     })
     .then(newEvent => res.redirect('/events'))
     .catch(err => console.log('Error:', err))
@@ -101,23 +115,31 @@ router.get('/edit/:events_id', (req, res) => {
 router.post('/edit/:events_id', (req, res) => {
 
   const eventsId = req.params.events_id
-  res.render(eventsId)
 
-  // const eventsId = req.params.events_id
+  const {
+    name,
+    description,
+    pictureUrl,
+    duration,
+    genre,
+    latitude,
+    longitude
+  } = req.body
 
-
-  //  const {
-  //    name,
-  //    description,
-  //    pictureUrl,
-  //    duration,
-  //    date,
-  //    genre,
-  //    latitude,
-  //    longitude
-  //  } = req.body
-
-  // console.log(req.body)
+  Event
+    .findByIdAndUpdate(eventsId, {
+      name,
+      description,
+      pictureUrl,
+      duration,
+      genre,
+      latitude,
+      longitude
+    }, {
+      new: true
+    })
+    .then(theEvent => res.redirect('/events'))
+    .catch(err => console.log(err))
 
 
 
