@@ -1,52 +1,54 @@
-<h1>EDITAR {{name}}<h1>
+<div class="container">
 
+    <h3> Editar <h3>
+            <h4 class="subtitles">{{theEvent.name}}</h4>
+            <div class="col-md-6 justify-content-center">
 
+                <form method="POST" action="/edit/{{theEvent._id}}">
 
-        <div class="container">
-            <h1>Editar eventos</h1>
+                    <div class="form-group">
+                        <label>Nombre</label>
+                        <input name="name" type="text" class="form-control" id="name-input" value="{{theEvent.name}}">
+                    </div>
 
-            <form method="POST" action="/edit/{{theEvent._id}}">
+                    <div class="form-group">
+                        <label>Descripción</label>
+                        <input name="description" type="text" class="form-control" id="description-input"
+                            value="{{theEvent.description}}">
+                    </div>
 
-                <div class="form-group">
-                    <label>Nombre</label>
-                    <input name="name" type="text" class="form-control" id="name-input" value="{{theEvent.name}}">
-                </div>
+                    <div class="form-group">
+                        <label>Duración</label>
+                        <input name="duration" type="text" class="form-control" id="duration-input"
+                            value="{{theEvent.duration}}">
+                    </div>
 
-                <div class="form-group">
-                    <label>Descripción</label>
-                    <input name="description" type="text" class="form-control" id="description-input"
-                        value="{{theEvent.description}}">
-                </div>
+                    <div class="form-group">
+                        <label>Imagen</label>
+                        <input name="pictureUrl" type="text" class="form-control" id="pictureUrl-input"
+                            value="{{theEvent.pictureUrl}}">
+                    </div>
 
-                <div class="form-group">
-                    <label>Duración</label>
-                    <input name="duration" type="text" class="form-control" id="duration-input"
-                        value="{{theEvent.duration}}">
-                </div>
+                    <div class="form-group">
+                        <label>Género</label>
+                        <input name="genre" type="text" class="form-control" id="genre-input"
+                            value="{{theEvent.genre}}">
+                    </div>
 
-                <div class="form-group">
-                    <label>Imagen</label>
-                    <input name="pictureUrl" type="text" class="form-control" id="pictureUrl-input"
-                        value="{{theEvent.pictureUrl}}">
-                </div>
+                    <div class="form-group">
+                        <label>Latitud</label>
+                        <input name="latitude" type="text" class="form-control" id="latitude-input"
+                            value="{{latitude}}">
+                    </div>
 
-                <div class="form-group">
-                    <label>Género</label>
-                    <input name="genre" type="text" class="form-control" id="genre-input" value="{{theEvent.genre}}">
-                </div>
+                    <div class="form-group">
+                        <label>Longitud</label>
+                        <input name="longitude" type="text" class="form-control" id="longitude-input"
+                            value="{{longitude}}">
+                    </div>
 
-                <div class="form-group">
-                    <label>Latitud</label>
-                    <input name="latitude" type="text" class="form-control" id="latitude-input" value="{{latitude}}">
-                </div>
+                    <button type="submit" class="btn-outline-dark rounded-0 btn-block">Modificar evento</button>
 
-                <div class="form-group">
-                    <label>Longitud</label>
-                    <input name="longitude" type="text" class="form-control" id="longitude-input" value="{{longitude}}">
-                </div>
-
-                <button type="submit" class="btn btn-dark btn-block">Modificar evento</button>
-
-            </form>
-
-        </div>
+                </form>
+            </div>
+</div>

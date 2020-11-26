@@ -7,6 +7,12 @@ const Event = require('./../models/event.model')
 //General Routes
 router.get('/about', (req, res) => res.render('main/about'))
 
+// Authenticated
+router.get('/', (req, res) => {
+  console.log('EL USUARIO CON SESION INCIADA ES:', req.user)
+  res.render('index')
+})
+
 const ensureAuthenticated = (req, res, next) => req.isAuthenticated() ? next() : res.render('client/login', {
   errorMsg: 'Por favor, inicia sesión'
 })

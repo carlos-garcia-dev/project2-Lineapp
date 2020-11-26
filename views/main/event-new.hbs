@@ -1,47 +1,50 @@
-<h1>PARTNER NEW EVENT</h1>
-
-
 <div class="container">
-    <h1>Nuevo evento</h1>
 
-    <form method="POST" action="/new-event?eventsId={{_id}}">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <h3>Nuevo evento</h3>
 
-        <div class="form-group">
-            <label>Nombre</label>
-            <input type="text" class="form-control" name="name">
+            <form method="POST" action="/new-event?eventsId={{_id}}">
+
+                <div class="form-group">
+                    <label>Nombre</label>
+                    <input type="text" class="form-control" name="name">
+                </div>
+
+                <div class="form-group">
+                    <label>Descripción</label>
+                    <input type="text" class="form-control" name="description">
+                </div>
+
+                <div class="form-group">
+                    <label>Duración</label>
+                    <input type="text" class="form-control" name="duration">
+                </div>
+
+                <div class="form-group">
+                    <label>Imagen</label>
+                    <input type="text" class="form-control" name="pictureUrl">
+                </div>
+
+                <div class="form-group">
+                    <label>Género</label>
+                    <input type="text" class="form-control" name="genre">
+                </div>
+
+                <div class="form-group">
+                    <label>Latitud</label>
+                    <input type="text" class="form-control" name="latitude">
+                </div>
+
+                <div class="form-group">
+                    <label>Longitud</label>
+                    <input type="text" class="form-control" name="longitude">
+                </div>
+
+                <button type="submit" class='btn-outline-dark rounded-0 btn-block'>Crear evento</button>
+            </form>
+
         </div>
-
-        <div class="form-group">
-            <label>Descripción</label>
-            <input type="text" class="form-control" name="description">
-        </div>
-
-        <div class="form-group">
-            <label>Duración</label>
-            <input type="text" class="form-control" name="duration">
-        </div>
-
-        <div class="form-group">
-            <label>Imagen</label>
-            <input type="text" class="form-control" name="pictureUrl">
-        </div>
-
-        <div class="form-group">
-            <label>Género</label>
-            <input type="text" class="form-control" name="genre">
-        </div>
-
-        <div class="form-group">
-            <label>Latitud</label>
-            <input type="text" class="form-control" name="latitude">
-        </div>
-
-        <div class="form-group">
-            <label>Longitud</label>
-            <input type="text" class="form-control" name="longitude">
-        </div>
-
-        <button type="submit" class="btn btn-info">Crear evento</button>
-    </form>
+    </div>
 
 </div>

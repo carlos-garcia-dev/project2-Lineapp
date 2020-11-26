@@ -1,23 +1,38 @@
 <div class="container">
 
+    <div class="row  justify-content-right">
 
-    <figure class="col-md-12 map"></figure>
 
-    <div class="row col-md-12 justify-content-right">
+        <div class="column">
 
-        <h2>Details</h2>
+            <h2>Details</h2>
 
-        <div class="col-md-6">
+
 
             <h3>{{theEvent.name}}</h3>
 
             <h5>{{description}} {{genre}} </h5>
             <p>Duration {{duration}} mins</p>
-            <p>{{date}}</p>
+            <p><a class="btn btn-outline-dark rounded-0 button-top" href="/streaming">Acceso al evento</a></p>
+            <p><a href="/events/"> Volver a eventos</a></p>
+
             <img src="{{pictureUrl}}" alt="Concert">
+
+
+
         </div>
 
-        <a href="/events/"> Volver a eventos</a>
+
+        <div class="column">
+            <aside class="col-md-6">
+
+
+
+            </aside>
+
+
+
+        </div>
 
     </div>
 </div>
