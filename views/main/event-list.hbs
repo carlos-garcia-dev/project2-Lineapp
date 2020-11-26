@@ -11,14 +11,14 @@
         {{#each allEvents}}
         <div class="col-md-6">
             <img src="{{pictureUrl}}" class="event-view" alt="{{name}} imagen">
-            <a href="/events/{{id}}'">
+            <a href="/edit/{{id}}">
                 <h3>{{name}}</h3>
             </a>
             <h5>{{description}} {{genre}} </h5>
             <p>Duration {{duration}} mins</p>
             <p>{{date}}</p>
             <p>{{location.coordinates}}</p>
-            <a href="/edit/{{id}}">Editar</a>
+          
             <a href="/delete/{{id}}">Borrar</a>
         </div>
         {{/each}}
@@ -27,9 +27,9 @@
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-//<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.0/axios.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.0/axios.min.js"></script>
 <script src="./javascripts/styles.js"></script>
 <script src="./javascripts/map.js"></script>
 
-<script
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAvBmAoi77sTvplzGG-uAcK9mOxngTEmuY&callback=initApp"></script>
+{{!-- <script
+    src="https://maps.googleapis.com/maps/api/js?key=_________________&callback=initApp"></script> --}}
