@@ -1,3 +1,4 @@
+const e = require('express')
 const express = require('express')
 const router = express.Router()
 
@@ -13,8 +14,12 @@ router.get('/events', (req, res) => {
 
   Event
     .find()
-    .then(allEvents => res.render('main/event-list', { allEvents }))
-    .catch(() => res.render("main/event-list", { errorMsg: "Hubo un error" }))
+    .then(allEvents => res.render('main/event-list', {
+      allEvents
+    }))
+    .catch(() => res.render("main/event-list", {
+      errorMsg: "Hubo un error"
+    }))
 })
 
 
@@ -23,11 +28,37 @@ router.get('/new-event', (req, res) => res.render('main/event-new'))
 
 router.post('/new-event', (req, res) => {
 
-  const { name, description, duration, date, genre, location, partner, active } = req.body
+  const {
+    name,
+    description,
+    pictureUrl,
+    duration,
+    date,
+    genre,
+    latitude,
+    longitude
+  } = req.body
+
+  const location = {
+    type: 'Point',
+    coordinates: [latitude, longitude]
+  }
+
+  const eventId = req.query.eventId
+
+
 
   Event
-    .create({ name, description, duration, date, genre, location, partner, active })
-    .then(() => res.redirect('/events'))
+    .create({
+      name,
+      description,
+      pictureUrl,
+      duration,
+      date,
+      genre,
+      location
+    })
+    .then(newEvent => res.redirect('/events'))
     .catch(err => console.log('Error:', err))
 })
 
@@ -44,34 +75,55 @@ router.get('/delete/:id', (req, res) => {
 })
 
 
-
-// router.get('/events/:_id', (req, res) => res.render('main/event-edit'))
-
-
 //Edit event
-router.get('/edit/:id', (req, res) => {
+router.get('/edit/:events_id', (req, res) => {
 
-  const eventsId = req.query.events_id
+  const eventsId = req.params.events_id
+
+  console.log(eventsId)
 
   Event
     .findById(eventsId)
-    // .then(theEvent => res.send(theEvent))
-    .then(theEvent => res.render('main/event-edit', theEvent))
+    .then(theEvent => {
+      const latitude = theEvent.location.coordinates[0]
+      const longitude = theEvent.location.coordinates[1]
+
+      res.render('main/event-edit', {
+        theEvent,
+        latitude,
+        longitude
+      })
+    })
     .catch(err => console.log(err))
 })
 
 
-router.post('/edit/:id', (req, res) => {
+router.post('/edit/:events_id', (req, res) => {
 
-  const eventsId = req.query.events_id
+  const eventsId = req.params.events_id
+  res.render(eventsId)
 
-  const { name, description, duration, date, genre, location, partner, active } = req.body
+  // const eventsId = req.params.events_id
 
-  Event
-    .findByIdAndUpdate(eventsId, { name, description, duration, date, genre, location, partner, active })
-    // .then(res.send({ name, description, duration, date, genre, location, partner, active }))
-    .then(theEvent => res.redirect('/events'))
-    .catch(err => console.log(err))
+
+  //  const {
+  //    name,
+  //    description,
+  //    pictureUrl,
+  //    duration,
+  //    date,
+  //    genre,
+  //    latitude,
+  //    longitude
+  //  } = req.body
+
+  // console.log(req.body)
+
+
+
+
+
+
 })
 
 module.exports = router

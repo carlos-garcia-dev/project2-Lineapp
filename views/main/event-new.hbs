@@ -4,31 +4,41 @@
 <div class="container">
     <h1>Nuevo evento</h1>
 
-    <form method="POST" action="/events/new-event?eventsId={{_id}}">
+    <form method="POST" action="/new-event?eventsId={{_id}}">
 
         <div class="form-group">
             <label>Nombre</label>
-            <input type="text" class="form-control" name="name" value="{{name}}">
+            <input type="text" class="form-control" name="name">
         </div>
+
         <div class="form-group">
             <label>Descripción</label>
-            <input type="text" class="form-control" name="description" value="{{description}}">
+            <input type="text" class="form-control" name="description">
         </div>
+
         <div class="form-group">
             <label>Duración</label>
-            <input type="text" class="form-control" name="duration" value="{{duration}}">
+            <input type="text" class="form-control" name="duration">
         </div>
+
         <div class="form-group">
-            <label>Fecha</label>
-            <input type="text" class="form-control" name="date" value="{{date}}">
+            <label>Imagen</label>
+            <input type="text" class="form-control" name="pictureUrl">
         </div>
+
         <div class="form-group">
             <label>Género</label>
-            <input type="text" class="form-control" name="genre" value="{{genre}}">
+            <input type="text" class="form-control" name="genre">
         </div>
+
         <div class="form-group">
-            <label>Localización</label>
-            <input type="text" class="form-control" name="location" value="{{location}}">
+            <label>Latitud</label>
+            <input type="text" class="form-control" name="latitude">
+        </div>
+
+        <div class="form-group">
+            <label>Longitud</label>
+            <input type="text" class="form-control" name="longitude">
         </div>
 
         <button type="submit" class="btn btn-info">Crear evento</button>

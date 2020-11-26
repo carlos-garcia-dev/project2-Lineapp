@@ -14,18 +14,12 @@ const eventSchema = new Schema({
 
     pictureUrl: {
         type: String,
-        required: true,
+
     },
 
     duration: {
         type: Number,
-        min: 30,
-        max: 500,
-        required: true,
-    },
 
-    date: {
-        type: Date,
         required: true,
     },
 
@@ -33,6 +27,14 @@ const eventSchema = new Schema({
         type: String,
         enum: ['pop', 'rock', 'techno', 'indie', 'jazz'],
         required: true,
+    },
+
+    latitude: {
+        type: Number,
+    },
+
+    longitude: {
+        type: Number,
     },
 
     location: {
@@ -44,10 +46,10 @@ const eventSchema = new Schema({
         },
     },
 
-    partner: [{
+    partner: {
         type: Schema.Types.ObjectId,
         ref: 'Client'
-    }],
+    },
 
     active: {
         type: Boolean,

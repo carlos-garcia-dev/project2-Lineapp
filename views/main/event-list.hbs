@@ -11,14 +11,14 @@
         {{#each allEvents}}
         <div class="col-md-6">
             <img src="{{pictureUrl}}" class="event-view" alt="{{name}} imagen">
-            <a href="/edit/{{id}}">
+            <a href="/edit/{{id}}'">
                 <h3>{{name}}</h3>
             </a>
             <h5>{{description}} {{genre}} </h5>
             <p>Duration {{duration}} mins</p>
             <p>{{date}}</p>
             <p>{{location.coordinates}}</p>
-          
+            <a href="/edit/{{id}}">Editar</a>
             <a href="/delete/{{id}}">Borrar</a>
         </div>
         {{/each}}
