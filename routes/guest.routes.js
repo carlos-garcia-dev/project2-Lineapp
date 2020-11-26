@@ -6,6 +6,8 @@ const Event = require('./../models/event.model')
 
 //General Routes
 router.get('/about', (req, res) => res.render('main/about'))
+router.get('/streaming', (req, res) => res.render('main/streaming'))
+
 
 // Authenticated
 router.get('/', (req, res) => {

@@ -61,4 +61,8 @@ footer {
 .button-down {
   margin-top: 20px; }
 
+#streaming {
+  width: 100%;
+  height: 600px; }
+
 /*# sourceMappingURL=style.css.map */
