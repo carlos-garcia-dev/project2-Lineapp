@@ -77,9 +77,10 @@ footer {
 
 #hero{
   height: 600px;
+  width: 100%;
   z-index: -9999;
   object-fit: cover;
-  background-image: url(../images/live-set.jpg);
+  // background-image: url(../images/live-set.jpg);
   color: #ffffff;
 }
 

@@ -8,6 +8,15 @@ const Event = require('./../models/event.model')
 const bcrypt = require("bcryptjs")
 const bcryptSalt = 10
 
+// Authenticated
+router.get('/', (req, res) => {
+    console.log('EL USUARIO CON SESION INCIADA ES:', req.user)
+    res.render('index')
+  })
+  
+  const ensureAuthenticated = (req, res, next) => req.isAuthenticated() ? next() : res.render('client/login', {
+    errorMsg: 'Por favor, inicia sesión'
+  })
 
 
 //Client
@@ -27,7 +36,7 @@ router.post('/signup', (req, res, next) => {
         return
     }
 
-    //Crear condicional acceso contraseña Regex
+  
 
     Client
         .findOne({

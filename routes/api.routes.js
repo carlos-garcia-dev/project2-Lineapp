@@ -1,14 +1,14 @@
 const express = require('express')
 const router = express.Router()
 
-const Client = require('./../models/client.model')
+const Event = require('./../models/event.model')
 
 // Endpoints
 router.get('/events', (req, res) => {
 
-    Client
+    Event
         .find()
-        .then(partners=> res.json(partners))
+        .then(events => res.json(events))
         .catch(err => next(err))
 })
 

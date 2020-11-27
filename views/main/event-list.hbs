@@ -46,10 +46,14 @@
             </div>
 
             <div class="column">
+
                 <aside class="column col-md-3">
 
-                    <p class="btn btn-outline-dark rounded-0" href="/edit/{{id}}">Editar</p>
-                    <p class="btn btn-outline-danger rounded-0" href="/delete/{{id}}">Borrar</p>
+                    {{#if ../isAdmin}}
+                    <p><a class="btn btn-outline-dark rounded-0" href="/edit/{{id}}">Editar</a></p>
+                    <p><a class="btn btn-outline-danger rounded-0" href="/delete/{{id}}">Borrar</a></p>
+                    {{/if}}
+
 
                 </aside>
 
@@ -63,6 +67,8 @@
 
         {{/each}}
 
+
+
     </div>
     </div>
 </section>
@@ -72,4 +78,5 @@
 <script src="./javascripts/styles.js"></script>
 <script src="./javascripts/map.js"></script>
 
-{{!-- <script src="https://maps.googleapis.com/maps/api/js?key=_________________&callback=initApp"></script> --}}
+<script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCA69CUKwfnNt9AXiX5Wy6Xqj6StJVEJww&callback=initApp"></script>

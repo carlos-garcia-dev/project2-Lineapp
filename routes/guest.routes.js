@@ -19,14 +19,29 @@ const ensureAuthenticated = (req, res, next) => req.isAuthenticated() ? next() :
 })
 
 
+
+
+
+
 // Read event
 router.get('/events', (req, res) => {
 
   Event
     .find()
-    .then(allEvents => res.render('main/event-list', {
-      allEvents
-    }))
+    .then(allEvents => {
+
+      console.log({
+        allEvents,
+        isAdmin: req.user ? req.user.role === 'Admin' : false
+      })
+
+      allEvents.forEach(events => events)  
+
+      res.render('main/event-list', {
+        allEvents,
+        isAdmin: true
+      })
+    })
     .catch(() => res.render("main/event-list", {
       errorMsg: "Hubo un error"
     }))
@@ -37,7 +52,6 @@ router.get('/events', (req, res) => {
 router.get('/details/:events_id', (req, res) => {
 
   const eventId = req.params.events_id
-  console.log(eventId)
   Event
     .findById(eventId)
     .then(theEvent => res.render('main/event-details', theEvent))
