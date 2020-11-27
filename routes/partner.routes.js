@@ -6,12 +6,13 @@ const Client = require('./../models/client.model')
 const Event = require('./../models/event.model')
 
 const bcrypt = require("bcryptjs")
-const { isValidObjectId } = require('mongoose')
+const {
+    isValidObjectId
+} = require('mongoose')
 const bcryptSalt = 10
 
 
 //SIGNUP
-
 router.get('/signup', (req, res, next) => res.render("partner/signup"))
 
 router.post('/signup', (req, res, next) => {
@@ -84,9 +85,17 @@ router.get('/:partner_id', (req, res, next) => {
         .then(allPartnerEvents => res.render('partner/index', {
             allPartnerEvents
         }))
-        .find({partner: filter})
-        .then(allPartnerEvents => res.render('partner/index', { allPartnerEvents }))
+        .find({
+            partner: filter
+        })
+        .then(allPartnerEvents => res.render('partner/index', {
+            allPartnerEvents
+        }))
         .catch(err => next(new Error(err)))
 })
+
+
+router.get('/about', (req, res, next) => res.render("partner/signup"))
+
 
 module.exports = router

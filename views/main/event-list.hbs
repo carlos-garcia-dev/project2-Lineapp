@@ -1,46 +1,59 @@
-<div class="container">
-    <h2>Events</h2>
-</div>
+<header class="container frame">
+    <div class="row">
+        <h2>Events</h2>
+    </div>
+    <a class="btn btn-outline-dark rounded-0 button-top" href="/new-event">Crear evento</a>
+</header>
 
 
 <figure class="col-md-12" id="map"></figure>
 
 
-<div class="container">
+<section class="container container-fluid">
 
     <div class="row">
 
-        <div class="col-10 justify-content-right">
+        <div class="col-10 justify-content-right"></div>
 
 
 
-            {{#each allEvents}}
+        {{#each allEvents}}
+        <div class="col-md-12">
             <img src="{{pictureUrl}}" class="event-view" alt="{{name}} imagen">
-            <div class="col-md-4">
+        </div>
+
+        <div class="row">
+
+            <div class="column col-md-8 ">
+
                 <a href="/edit/{{id}}'">
                     <h3><a href="/details/{{id}}">{{name}}</a></h3>
                 </a>
-                <h5>{{description}} {{genre}} </h5>
-                <p>Duration {{duration}} mins</p>
-
+                <h5>{{description}} </h5> <a class="genre">{{genre}}</a>
+                <p>Duración {{duration}} mins</p>
             </div>
 
-            <aside class="col-md-2 align-items-center space-between">
-                <a class="btn  btn-outline-dark rounded-0 button-top" href="/edit/{{id}}">Editar</a>
-                <a class="btn  btn-outline-danger rounded-0 button-down" href="/delete/{{id}}">Borrar</a>
+            <aside class="column col-md-4">
+
+
+                <a class="btn btn-outline-dark rounded-0 button-top" href="/edit/{{id}}">Editar</a>
+                <a class="btn btn-outline-danger rounded-0 button-down" href="/delete/{{id}}">Borrar</a>
 
             </aside>
 
-            {{/each}}
-            <a class="btn  btn-outline-dark rounded-0 button-top" href="/new-event">Crear evento</a>
+
         </div>
+
+
+        {{/each}}
+
     </div>
-</div>
+    </div>
+</section>
 
 <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.0/axios.min.js"></script>
 <script src="./javascripts/styles.js"></script>
 <script src="./javascripts/map.js"></script>
 
-{{!-- <script
-    src="https://maps.googleapis.com/maps/api/js?key=_________________&callback=initApp"></script> --}}
+{{!-- <script src="https://maps.googleapis.com/maps/api/js?key=_________________&callback=initApp"></script> --}}
