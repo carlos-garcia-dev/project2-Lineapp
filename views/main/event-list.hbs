@@ -1,8 +1,13 @@
 <header class="container frame">
     <div class="row">
-        <h2>Events</h2>
+        <div class="col-md-6">
+            <h2>Eventos</h2>
+        </div>
+        <div class="col-md-6">
+
+            <a class="btn btn-outline-dark rounded-0 align-items-end button-top" href="/new-event">Crear evento</a>
+        </div>
     </div>
-    <a class="btn btn-outline-dark rounded-0 button-top" href="/new-event">Crear evento</a>
 </header>
 
 
@@ -24,22 +29,33 @@
 
         <div class="row">
 
-            <div class="column col-md-8 ">
-
+            <div class="column col-md-4 center-frame">
                 <a href="/edit/{{id}}'">
                     <h3><a href="/details/{{id}}">{{name}}</a></h3>
                 </a>
-                <h5>{{description}} </h5> <a class="genre">{{genre}}</a>
+                <h5>{{description}}</h5> <a class="genre">{{genre}}</a>
                 <p>Duración {{duration}} mins</p>
             </div>
 
-            <aside class="column col-md-4">
+            <div class="column col-md-4">
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt nam repudiandae voluptatum adipisci
+                    perferendis commodi praesentium recusandae voluptatibus nemo. Debitis perspiciatis saepe soluta
+                    tempore quod.
+                </p>
+            </div>
+
+            <div class="column">
+                <aside class="column col-md-3">
+
+                    <p class="btn btn-outline-dark rounded-0" href="/edit/{{id}}">Editar</p>
+                    <p class="btn btn-outline-danger rounded-0" href="/delete/{{id}}">Borrar</p>
+
+                </aside>
+
+            </div>
 
 
-                <a class="btn btn-outline-dark rounded-0 button-top" href="/edit/{{id}}">Editar</a>
-                <a class="btn btn-outline-danger rounded-0 button-down" href="/delete/{{id}}">Borrar</a>
-
-            </aside>
 
 
         </div>

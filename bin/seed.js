@@ -10,7 +10,6 @@ const events = [{
         description: 'Techno Live Set',
         duration: '315',
         pictureUrl: 'https://i-d-images.vice.com/images/2017/03/21/regal-desmonta-los-clichs-de-la-escena-techno-en-espaa-body-image-1490114313.jpg',
-        date: new Date(2020, 12, 31, 03, 00),
         genre: 'techno',
         location: {
             type: 'Point',
@@ -31,7 +30,6 @@ const events = [{
         description: 'Música en directo',
         duration: '90',
         pictureUrl: 'https://highlark.com/wp-content/uploads/2017/02/Devendra-Banhart-Mayan-Highlark-02-1024x683.jpg',
-        date: new Date(2020, 02, 18, 21, 00),
         genre: 'indie',
         location: {
             type: 'Point',
@@ -52,7 +50,6 @@ const events = [{
         description: 'Set Live de Vril',
         duration: '300',
         pictureUrl: 'https://pbs.twimg.com/media/D_RgrI8VUAEf7Yt.jpg:large',
-        date: new Date(2020, 06, 23, 02, 30),
         genre: 'techno',
         location: {
             type: 'Point',
@@ -73,7 +70,6 @@ const events = [{
         description: 'Directo desde museo Reina Sofía',
         duration: '65',
         pictureUrl: 'https://www.vipstylemagazine.com/wp-content/uploads/2019/01/vetusta-vms16.1.png',
-        date: new Date(2020, 09, 02, 03, 00),
         genre: 'pop',
         location: {
             type: 'Point',
@@ -93,8 +89,7 @@ const events = [{
         name: 'Ibeyi',
         description: 'Música en directo',
         duration: '90',
-        pictureUrl: //'TO-DO',
-            date: new Date(2020, 05, 22, 21, 00), //TO-DO
+        pictureUrl: 'https://www.allthingsloud.com/wp-content/uploads/2018/10/DSC_2269.jpg',
         genre: 'indie',
         location: {
             type: 'Point',
@@ -106,7 +101,7 @@ const events = [{
             'name': 'Café Berlin',
             'cif': 'B86762023',
             'fiscalName': 'CAFE BERLIN S.L.',
-            'direction': 'C, Costanilla de los Ángeles, 20, 28013 Madrid',
+            'direction': 'Calle Costanilla de los Ángeles, 20, 28013 Madrid',
         },
         active: 'true'
     },
@@ -115,7 +110,6 @@ const events = [{
         description: 'Live Music',
         duration: '300',
         pictureUrl: 'https://cdn2.gigantic.com/static/images/campaign/820x500/larkin_poe-5869419494.jpg',
-        date: new Date(2020, 06, 17, 02, 30),
         genre: 'rock',
         location: {
             type: 'Point',
@@ -137,7 +131,6 @@ const events = [{
         description: 'Soul',
         duration: '315',
         pictureUrl: 'https://cdn2.gigantic.com/static/images/campaign/820x500/larkin_poe-5869419494.jpg',
-        date: new Date(2020, 03, 14, 03, 00),
         genre: 'techno',
         location: {
             type: 'Point',
@@ -148,17 +141,17 @@ const events = [{
             'role': 'Partner',
             'name': 'Sala Clamores',
             'cif': 'A28651036',
-            'fiscalName': 'Europea De Explotaciones S.A.', //TO-DO
+            'fiscalName': 'Europea De Explotaciones S.A.',
             'direction': 'Calle de Alburquerque, 14, 28010 Madrid',
         },
         active: 'true'
     },
     {
-        name: 'Kwartz',
-        description: 'Música en directo',
-        duration: '90',
-        pictureUrl: //'TO-DO',
-            date: new Date(2020, 02, 06, 21, 00),
+        name: 'Psyk',
+        description: '',
+        duration: '320',
+        pictureUrl: 'https://thump-images.vice.com/images/2016/09/28/entrevista-psyk-body-image-1475089233.jpg',
+
         genre: 'indie',
         location: {
             type: 'Point',
@@ -167,30 +160,30 @@ const events = [{
 
         partner: {
             'role': 'Partner',
-            'name': 'Sala La Riviera',
-            'cif': 'B86762010',
+            'name': 'Sala Stardust',
+            'cif': 'B87862920',
             'fiscalName': 'LA RIVIERA S.L.',
             'direction': 'Paseo Bajo de la Virgen del Puerto, 328005',
         },
         active: 'true'
     },
     {
-        name: 'Vril (Live)',
-        description: 'Set Live de Vril',
+        name: 'Bob Moses',
+        description: 'Live Concert Film∂',
         duration: '300',
-        pictureUrl: 'https://pbs.twimg.com/media/D_RgrI8VUAEf7Yt.jpg:large',
-        date: new Date(2020, 06, 23, 02, 30), //TO-DO
-        genre: 'techno',
+        pictureUrl: 'https://raversheaven.co.uk/wp-content/uploads/2020/11/20201120_5fb8121b997dd.jpg',
+
+        genre: 'indie',
         location: {
             type: 'Point',
-            coordinates: [40.4653883, -3.6750375] //TO-DO
+            coordinates: [40.4653883, -3.6750375]
         },
-        partner: { //TO-DO
+        partner: {
             'role': 'Partner',
-            'name': 'Sala Crow',
+            'name': 'Sala La Riviera',
             'cif': 'B87687083',
             'fiscalName': 'Live Music Lab S.L.',
-            'direction': 'Lugar Estacion de Ferrocarril Chamartin, S/N - LOCAL 8, Madrid, 28036', //TO-DO
+            'direction': 'Lugar Estacion de Ferrocarril Chamartin, S/N - LOCAL 8, Madrid, 28036',
         },
         active: 'true'
     },

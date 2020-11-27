@@ -1,3 +1,3 @@
 module.exports = app => {
-    app.locals.title = 'LineApp'
+    app.locals.title = 'lineApp'
 }

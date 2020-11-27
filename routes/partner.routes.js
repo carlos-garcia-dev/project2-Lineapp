@@ -12,6 +12,11 @@ const {
 const bcryptSalt = 10
 
 
+
+
+//ABOUT
+router.get('/about', (req, res, next) => res.render("partner/about"))
+
 //SIGNUP
 router.get('/signup', (req, res, next) => res.render("partner/signup"))
 
@@ -94,8 +99,6 @@ router.get('/:partner_id', (req, res, next) => {
         .catch(err => next(new Error(err)))
 })
 
-
-router.get('/about', (req, res, next) => res.render("partner/signup"))
 
 
 module.exports = router

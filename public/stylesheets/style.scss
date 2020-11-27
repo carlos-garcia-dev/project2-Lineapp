@@ -3,11 +3,12 @@ body {
 }
 
 h1,h2,h3{
-  font-weight: 400;
+  font-weight: 600;
+  color: #000000;
 }
 
 h4, h5, h6, p {
-  color: #bcbabb;
+  color: #000000;
   font-weight: 300;
 }
 
@@ -22,31 +23,28 @@ img{
 }
 
 
-.button-size{
-  width: 20vh;
+a{
+  font-weight: 700;
+  color: #7f7f7f;
+  text-decoration: none;
 }
-//#bcbabb Lgrey
 
+a:hover{
+  color: black;
+
+  transition: ease-in .5s;  
+
+  // filter: saturate(50);
+  //   transition: all .7s;
+}
 
 .genre{
   text-transform: uppercase;
   font-size: .9em;
   color: #bcbabb;
 }
-
-a{
-  font-weight: 700;
-  color: #000;
+.genre:hover{
   text-decoration: none;
-}
-
-a:hover{
-  color: black;
-  text-decoration: none;
-  transition: all .5s;  
-
-  // filter: saturate(50);
-  //   transition: all .7s;
 }
 
 .navigation-links {
@@ -73,7 +71,7 @@ a:hover{
 footer {
 
   padding-top: 20px;
-  background-color: #bcbabb;
+  background-color: #ffffff;
   height: 60px;
 }
 
@@ -86,13 +84,18 @@ footer {
 }
 
 .claim{
-  font-weight: 500;
+  color: #ffffff;
+  font-weight: 600;
   z-index: 999;
+}
+
+.more-info{
+color: #ffffff;
 }
 
 //Events
 #map{
-  height: 400px;
+  height: 60vh;
   background-color: #7f7f7f;
   width: 100%;
 }
@@ -114,7 +117,7 @@ margin-top: 20px;
 }
 
 .titulo{
-  color: red;
+  color: #000000;
 }
 
 
@@ -124,5 +127,9 @@ margin-top: 20px;
 #streaming{
   width: 100%;
   height: 600px;
+}
+
+.center-frame{
+  margin-left: 15px;
 }
 
